@@ -22,7 +22,6 @@ function zero() {
   newmatrix.length = 0;
   newarr.length = 0;
 }
-//   //emptying grid cells
 checkBtn.addEventListener('click', () => {
   for (let i = 0; i < grid.length; i++) {
     for (let j = 0; j < grid.length; j++) {
@@ -30,7 +29,6 @@ checkBtn.addEventListener('click', () => {
     }
   }
 });
-////////calling random
 checkBtn.addEventListener('click', random);
 
 export let matrix = [];
@@ -49,7 +47,6 @@ checkBtn.addEventListener('click', () => {
   fillArray(arr);
 });
 
-////filing matrix  with gird numbers from array
 
 export function split(arr, len) {
   let i = 0;
@@ -65,7 +62,6 @@ checkBtn.addEventListener('click', () => {
   split(arr, 3);
 });
 
-////creating new matrix from random elements of game desk
 let newmatrix = [];
 let newarr = [];
 function createMatrix() {
