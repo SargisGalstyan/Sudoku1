@@ -9,7 +9,6 @@ function checkNum(event) {
     checkHard.setAttribute('disabled', 'disabled');
   } else {
     checkHard.removeAttribute('disabled', 'disabled');
-    // check.removeAttribute('disabled', 'disabled');
   }
 }
 
