@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   background: #1E1C37;
-  /* background: linear-gradient(0deg, #333, #000); */
+  
 }
 .board {
   display: grid;
@@ -29,9 +29,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: xx-large;
-  /* box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1); */
   border-radius: 5%;
-  /* border-radius: 20px; */
 }
 .board > div:focus {
   outline: none;
@@ -176,7 +174,6 @@ body {
 
 .desk,
 .deskHard {
-  /* border: 1px solid var(--borderColor); */
 
   display: flex;
   flex-direction: row;
@@ -186,7 +183,6 @@ body {
   right:5%;
   float: right;
   clear: right;
-  /* box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1); */
   border-radius: 20px;
   margin-top: 1%;
   padding: 5px;
@@ -201,11 +197,6 @@ body {
   margin: 10px;
 }
 
-/* .results{
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
 .score,
 .scoreHard {
   list-style-type: none;
@@ -218,24 +209,18 @@ body {
   align-self: center;
   align-items: center;
   margin-top: 10%;
-  /* background: linear-gradient(0deg, #333, #000); */
-  /* background-color: #151515; */
-  /* background-color: linear-gradient(0deg, #e67e22, #f39c12); */
   width: 50%;
   height: 500px;
   margin-left: auto;
   margin-right: auto;
-  /* grid-gap: 10px; */
 }
 .grid {
-  /* border: 1px solid var(--borderColor); */
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   align-self: center;
   align-items: center;
-  /* box-shadow: 0 0 0 2px #353535, 0 0 0 5px #3e3e3e, inset 0 0 5px rgba(0, 0, 0, 1); */
   border-radius: 2px;
   margin: -2px;
 }
@@ -338,14 +323,12 @@ input[type='checkbox'] {
   -webkit-appearance: none;
   background: linear-gradient(0deg, #176158, #2a9d8f);
   outline: none;
-  border-radius: 20px;
-  /* box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1); */
+  border-radius: 20px
   cursor: pointer;
 }
 
 input:checked[type='checkbox']:nth-of-type(1) {
   background: linear-gradient(0deg, #176158, #2a9d8f);
-  /* box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1); */
 }
 
 input[type='checkbox']:before {
