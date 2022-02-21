@@ -1,0 +1,407 @@
+:root {
+  --borderColor: #ec943c;
+  --bgColor: #176158;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #1E1C37;
+  /* background: linear-gradient(0deg, #333, #000); */
+}
+.board {
+  display: grid;
+  grid-template-columns: 15% 15% 15%;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  margin-top: 15%;
+  grid-gap: 10px;
+}
+.board > div {
+  background-color: var(--bgColor);
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  color: rgb(221, 198, 198);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  /* box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1); */
+  border-radius: 5%;
+  /* border-radius: 20px; */
+}
+.board > div:focus {
+  outline: none;
+}
+.check {
+  grid-column: 3 / 3;
+  cursor: pointer;
+  align-items: center;
+  background-color: #4d917a;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: ease 0.5s;
+}
+
+.check:hover {
+  background-color: #176158;
+}
+
+.change {
+  grid-column: 1 / 2;
+  cursor: pointer;
+  align-items: center;
+  background-color: #4d917a;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: ease 0.5s;
+}
+
+.change:hover {
+  background-color: #176158;
+}
+.modal {
+  width: 450px;
+  height: 250px;
+  background-color: rgb(110, 61, 61);
+  display: flex;
+  flex-direction: column-reverse;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  margin-left: 19%;
+  margin-top: 20%;
+  border-radius: 20px;
+  font-size: 30px;
+}
+.modal1 {
+  width: 200px;
+  height: 50px;
+  background-color: rgb(131, 52, 52);
+  display: flex;
+  flex-direction: column-reverse;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+  visibility: hidden;
+}
+
+.modalBtn, .modalBtn1 {
+  width: 150px;
+  height: 35px;
+  margin-top: 30px;
+  align-items: center;
+  background-color: #4d917a;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: ease 0.5s;
+}
+
+.modalBtn:hover, .modalBtn1:hover {
+  background-color: #176158;
+}
+.stopwatch {
+  position: relative;
+  float: right;
+  border-radius: 2%;
+  margin-right: 50px;
+  width: 300px;
+  /* margin-top: -20px; */
+  color: #2a9d8f;
+}
+
+#name {
+  border-radius:12px;
+  max-width: 70%;
+  width: 250px;
+  outline: none;
+  height: 20px;
+  color: aliceblue;
+  background-color: grey;
+}
+
+.time {
+  display: inline-block;
+  height:20px;
+}
+
+
+.desk,
+.deskHard {
+  /* border: 1px solid var(--borderColor); */
+
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  height: 330px;
+  position: relative;
+  right:5%;
+  float: right;
+  clear: right;
+  /* box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1); */
+  border-radius: 20px;
+  margin-top: 1%;
+  padding: 5px;
+  justify-content: space-around;
+  background-color: #176158;
+  color: aliceblue;
+}
+
+
+.desk li,
+.deskHard li{
+  margin: 10px;
+}
+
+/* .results{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+.score,
+.scoreHard {
+  list-style-type: none;
+}
+
+.hard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  margin-top: 10%;
+  /* background: linear-gradient(0deg, #333, #000); */
+  /* background-color: #151515; */
+  /* background-color: linear-gradient(0deg, #e67e22, #f39c12); */
+  width: 50%;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  /* grid-gap: 10px; */
+}
+.grid {
+  /* border: 1px solid var(--borderColor); */
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  /* box-shadow: 0 0 0 2px #353535, 0 0 0 5px #3e3e3e, inset 0 0 5px rgba(0, 0, 0, 1); */
+  border-radius: 2px;
+  margin: -2px;
+}
+.grid > div {
+  border: 1px solid rgb(10, 10, 10);
+  width: 100%;
+  height: 45px;
+  margin: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+  border-top: none;
+  background-size: 50%;
+}
+.grid > div:focus {
+  outline: none;
+}
+.grid > div:nth-child(n + 2),
+.grid > div:nth-child(1) {
+  border-left: none;
+}
+
+.grid > div:nth-child(3n + 3) {
+  border-right: none;
+}
+.grid > div:nth-child(1n + 7) {
+  border-bottom: none;
+}
+.checkHard {
+  grid-row: 9;
+  grid-column: 1/2;
+  align-items: center;
+  background-color: #4d917a;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: ease 0.5s;
+}
+
+.checkHard:hover {
+  background-color: #176158;
+}
+
+.addRandom {
+  grid-row: 9;
+  grid-column: 3/4;
+  align-items: center;
+  background-color: #4d917a;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: ease 0.5s;
+}
+
+.addRandom:hover {
+  background-color: #176158;
+}
+
+.center {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+button {
+  cursor: pointer;
+}
+input[type='checkbox'] {
+  margin: 10px;
+  position: relative;
+  width: 120px;
+  height: 40px;
+  -webkit-appearance: none;
+  background: linear-gradient(0deg, #176158, #2a9d8f);
+  outline: none;
+  border-radius: 20px;
+  /* box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1); */
+  cursor: pointer;
+}
+
+input:checked[type='checkbox']:nth-of-type(1) {
+  background: linear-gradient(0deg, #176158, #2a9d8f);
+  /* box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1); */
+}
+
+input[type='checkbox']:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 40px;
+  background: linear-gradient(0deg, #0e3b36, #176158);
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px #232323;
+  transform: scale(0.98, 0.96);
+  transition: 0.5s;
+}
+
+input:checked[type='checkbox']:before {
+  left: 40px;
+}
+
+input[type='checkbox']:after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 70px;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(0deg, #6b6b6b, #000);
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+input:checked[type='checkbox']:after {
+  left: 110px;
+}
+.grid:nth-child(odd) {
+  background-color: #176158;
+}
+.grid:nth-child(even) {
+  background-color: #2a9d8f;
+}
+
+.block {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(196, 178, 178, 0.5);
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  visibility: hidden;
+  
+}
+
+.checkHard:disabled, .addRandom:disabled {
+    background-color: #0a2b27;
+    color: rgb(87, 85, 85);
+}
